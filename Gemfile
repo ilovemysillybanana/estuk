@@ -47,5 +47,7 @@ group :development, :test do
   gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
   #simpleform
   gem 'simple_form'
+  #devise - to add users to add application
+  gem 'devise'
 end
 
