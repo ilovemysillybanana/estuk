@@ -52,5 +52,7 @@ group :development, :test do
 
   #can can for authorization
   gem 'cancan'
+  #image magick/this are for image thumbnails
+  gem 'paperclip'
 end
 
