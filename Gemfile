@@ -54,5 +54,7 @@ group :development, :test do
   gem 'cancan'
   #image magick/this are for image thumbnails
   gem 'paperclip'
+
+  gem 'dotenv-rails', groups: :development
 end
 
