@@ -49,5 +49,8 @@ group :development, :test do
   gem 'simple_form'
   #devise - to add users to add application
   gem 'devise'
+
+  #can can for authorization
+  gem 'cancan'
 end
 
