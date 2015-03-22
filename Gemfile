@@ -58,5 +58,7 @@ group :development, :test do
   gem 'dotenv-rails', groups: :development
 
   gem 'aws-sdk', '< 2.0'
+  #friendly id
+  gem 'friendly_id'
 end
 
