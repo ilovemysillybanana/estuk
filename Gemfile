@@ -3,8 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -39,8 +38,7 @@ group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+
 
   #GEMS ADDED
   #adding twitter bootstrap
@@ -55,8 +53,6 @@ group :development, :test do
   #image magick/this are for image thumbnails
   gem 'paperclip'
 
-  gem 'dotenv-rails', groups: :development
-
   gem 'aws-sdk', '< 2.0'
   #friendly id
   gem 'friendly_id'
@@ -64,5 +60,18 @@ group :development, :test do
   gem 'stripe'
   #state machine, monitor transactions
   gem 'aasm'
+
+  group :development do
+    # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+    gem 'spring'
+    # Use sqlite3 as the database for Active Record
+    gem 'sqlite3'
+    gem 'dotenv-rails'
+  end
+
+  group :production do
+    gem 'rails_12factor'
+    gem 'pg'
+  end
 end
 
