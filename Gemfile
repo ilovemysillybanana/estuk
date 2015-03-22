@@ -62,5 +62,7 @@ group :development, :test do
   gem 'friendly_id'
   #card processing
   gem 'stripe'
+  #state machine, monitor transactions
+  gem 'aasm'
 end
 
