@@ -27,8 +27,16 @@ class BooksController < ApplicationController
   # POST /books.json
   def create
     @book = current_user.books.new(book_params)
-    @book.save
-    respond_with(@book)
+
+    respond_to do |format|
+      if @book.save
+        format.html { redirect_to @book, notice: 'Book was successfully created.' }
+        format.json { render :show, status: :created, location: @book }
+      else
+        format.html { render :new }
+        format.json { render json: @book.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # PATCH/PUT /books/1
