@@ -60,5 +60,7 @@ group :development, :test do
   gem 'aws-sdk', '< 2.0'
   #friendly id
   gem 'friendly_id'
+  #card processing
+  gem 'stripe'
 end
 
